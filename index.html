@@ -2,10 +2,10 @@
   <head>
     <title>Test is the best!!</title>
   </head>
-  <body style="display: flex; flex-direction: row">
+  <body style="display: flex; flex-direction: row; justify-content: space-between">
     <div>
       <p>COBRA VS</p>
-      <button type="button">Rodan and Fields button (i.e. close the iframe and reopen the iframe</button>
+      <p><button type="button">Rodan and Fields button</button>  (i.e. close the iframe and reopen the iframe</p>
       <iframe src="https://cobra-branches-www.dev.video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div>
@@ -27,7 +27,7 @@
 
 
     <p>LIVE VS</p>
-    <p><button type="button">Rodan and Fields button (i.e. close the iframe and reopen the iframe</button></p>
+    <p><button type="button">Rodan and Fields button</button>  (i.e. close the iframe and reopen the iframe</p>
     <iframe src="https://video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div>
@@ -39,7 +39,7 @@
     <script>
       document.querySelectorAll('button').forEach((b) => {
         b.addEventListener('click', (e) => {
-          const i = e.target.nextElementSibling;
+          const i = e.target.parentNode.nextElementSibling;
           if (i.src) {
             i.setAttribute('data-src', i.src);
             i.removeAttribute('src');
