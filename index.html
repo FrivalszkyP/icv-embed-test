@@ -39,7 +39,7 @@
     <script>
       document.querySelectorAll('button').forEach((b) => {
         b.addEventListener('click', (e) => {
-          const i = b.target.nextElementSibling;
+          const i = e.target.nextElementSibling;
           if (i.src) {
             i.setAttribute('data-src', i.src);
             i.removeAttribute('src');
