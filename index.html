@@ -1,24 +1,55 @@
 <html>
-<title>Test is the best!!</title>
-<body>
-<p>COBRA VS</p>
-<iframe src="https://cobra-branches-www.dev.video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<p>COBRA EVS</p>
-<iframe src="https://cobra-branches-www.dev.video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <head>
+    <title>Test is the best!!</title>
+  </head>
+  <body style="display: flex; flex-direction: row">
+    <div>
+      <p>COBRA VS</p>
+      <button type="button">Rodan and Fields button (i.e. close the iframe and reopen the iframe</button>
+      <iframe src="https://cobra-branches-www.dev.video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div>
+      <p>COBRA EVS</p>
+      <iframe src="https://cobra-branches-www.dev.video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div>
 
 
-<!--p>EFK VS SocialStream</p>
-<iframe src="https://git-www.dev.video.ibm.com.lh/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe -->
+    <!--p>EFK VS SocialStream</p>
+    <iframe src="https://git-www.dev.video.ibm.com.lh/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe -->
+    </div>
+    <div>
 
-<!-- p>EFK VS Chat</p>
-<iframe src="https://git-www.dev.video.ibm.com.lh/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe -->
+    <!-- p>EFK VS Chat</p>
+    <iframe src="https://git-www.dev.video.ibm.com.lh/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe -->
+    </div>
+    <div>
 
-  
-<p>LIVE VS</p>
-<iframe src="https://video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<p>LIVE EVS</p>
-<iframe src="https://video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  
-</body>
+    <p>LIVE VS</p>
+    <p><button type="button">Rodan and Fields button (i.e. close the iframe and reopen the iframe</button></p>
+    <iframe src="https://video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div>
+
+    <p>LIVE EVS</p>
+    <iframe src="https://video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <script>
+      document.querySelectorAll('button').forEach((b) => {
+        b.addEventListener('click', (e) => {
+          const i = b.target.nextElementSibling;
+          if (i.src) {
+            i.setAttribute('data-src', i.src);
+            i.removeAttribute('src');
+          } else {
+            i.setAttribute('src', i.dataList.src);
+            i.removeAttribute('data-src');
+          }
+        });
+      });
+    </script>
+
+  </body>
 </html>
