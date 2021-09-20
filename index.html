@@ -1,84 +1,88 @@
 <html>
-  <head>
-    <title>Test is the best!!</title>
-    <style>
-      body {
-        display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;
-      }
-      div {
-        width: 320px;
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <p>COBRA VS - SocialStream (embed in embed)</p>
-      <p><button type="button">Rodan and Fields button</button>  (i.e. close the iframe and reopen the iframe</p>
-      <iframe src="https://cobra-branches-www.dev.video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div>
-      <p>COBRA EVS - Interactivity (embed in embed)</p>
-      <iframe src="https://cobra-branches-www.dev.video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div>
 
+<head>
+    <title>Chat embed test</title>
+</head>
 
-    <!--p>EFK VS SocialStream</p>
-    <iframe src="https://git-www.dev.video.ibm.com.lh/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe -->
-    </div>
-    <div>
+<body>
+    <h1>Chat embed test</h1>
+    <h2>Click one of the buttons to turn an iframe on and off</h2>
+    <h3>Click the same button multiple times to turn the iframe on and off again (i.e. the Rodan and Fields issue)</e>
+        <h3>Be careful not to turn multiple iframes on because sessions to be overwritten</h3>
+        <h3>Clear all website data before you turn a different iframe on</h3>
 
-    <!-- p>EFK VS Chat</p>
-    <iframe src="https://git-www.dev.video.ibm.com.lh/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe -->
-    </div>
-    <div>
+        <div class="js-buttons">
+            <p>
+                <button
+                    data-src="https://cobra-branches-www.dev.video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false"
+                    type="button">
+                    COBRA VS (24078596) - SocialStream (embed in embed)
+                </button>
+                <button
+                    data-src="https://cobra-branches-www.dev.video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false"
+                    type="button">
+                    COBRA EVS (24144573) - Interactivity (embed in embed)
+                </button>
+                <button
+                    data-src="https://cobra-branches-www.dev.video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false"
+                    type="button">
+                    COBRA EVS (24144573) - Interactivity (embed in embed)
+                </button>
+                <button
+                    data-src="https://git-www.dev.video.ibm.com.lh/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false"
+                    type="button">
+                    EFK VS (24078596) - SocialStream (embed in embed)
+                </button>
+                <button
+                    data-src="https://git-www.dev.video.ibm.com.lh/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false"
+                    type="button">
+                    EFK VS (24078596) - Chat (only one iframe)
+                </button>
+                <button
+                    data-src="https://video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771"
+                    type="button">
+                    LIVE VS (24078596) - SocialStream (embed in embed)
+                </button>
+                <button
+                    data-src="https://cobra-branches-www.dev.video.ibm.com/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false"
+                    type="button">
+                    COBRA VS (24078596) - Chat (only one iframe)
+                </button>
+                <button
+                    data-src="https://cobra-branches-www.dev.video.ibm.com/chat/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false"
+                    type="button">
+                    COBRA EVS (24144573) - Chat (only one iframe)
+                </button>
+                <button
+                    data-src="https://video.ibm.com/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771"
+                    type="button">
+                    LIVE VS (24078596) - Chat (only one iframe)
+                </button>
+                <button
+                    data-src="https://video.ibm.com/chat/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771"
+                    type="button">
+                    LIVE EVS (24144573) - Chat (only one iframe)
+                </button>
+            </p>
+            <iframe class="js-iframe" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
+        <script>
+            const iframe = document.querySelector('.js-iframe');
+            document.querySelector('.js-buttons')
+                .addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'BUTTON') {
+                        return;
+                    }
+                    const src = e.target.dataset.src;
+                    if (iframe.src === src) {
+                        iframe.src = 'about:blank';
+                    } else {
+                        iframe.src = src;
+                    }
+                });
+        </script>
 
-    <p>LIVE VS - SocialStream (embed in embed)</p>
-    <p><button type="button">Rodan and Fields button</button>  (i.e. close the iframe and reopen the iframe</p>
-    <iframe src="https://video.ibm.com/socialstream/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div>
+</body>
 
-    <p>LIVE EVS - Interactivity (embed in embed)</p>
-    <iframe src="https://video.ibm.com/internal/interactivity-embed/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div>
-      <p>COBRA VS - Chat (only one iframe)</p>
-      <p><button type="button">Rodan and Fields button</button>  (i.e. close the iframe and reopen the iframe</p>
-      <iframe src="https://cobra-branches-www.dev.video.ibm.com/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771&packaging=false" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div>
-      <p>COBRA EVS - Chat (only one iframe)</p>
-      <iframe src="https://cobra-branches-www.dev.video.ibm.com/chat/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div>
-    <p>LIVE VS - Chat (only one iframe)</p>
-    <p><button type="button">Rodan and Fields button</button>  (i.e. close the iframe and reopen the iframe</p>
-    <iframe src="https://video.ibm.com/chat/24078596?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div>
-
-    <p>LIVE EVS - Chat (only one iframe)</p>
-    <iframe src="https://video.ibm.com/chat/24144573?videos=0&theme=g10&messageVerticalSpacing=default&mainLinkColor=0f62fe&moderatorNameColor=d12771" style="border: 0;" webkitallowfullscreen allowfullscreen frameborder="no" width="320" height="500" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <script>
-      document.querySelectorAll('button').forEach((b) => {
-        b.addEventListener('click', (e) => {
-          const i = e.target.parentNode.nextElementSibling;
-          if (i.src) {
-            i.setAttribute('data-src', i.src);
-            i.removeAttribute('src');
-          } else {
-            i.setAttribute('src', i.dataset.src);
-            i.removeAttribute('data-src');
-          }
-        });
-      });
-    </script>
-
-  </body>
 </html>
